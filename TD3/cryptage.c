@@ -13,6 +13,25 @@
 
 
 
+void coder(char message[], int clef) {
+    int i = 0;
+    while (message[i] != '\0') {
+        if (message[i] >= 'A' && message[i]<= 'Z') {
+            char c = message[i] - 'A';
+            c += clef;
+            c = c % 26;
+            message[i] = c + 'A';
+        }else if (message[i] >= 'a' && message[i]<= 'z') {
+            char c = message[i] - 'a';
+            c += clef;
+            c = c % 26;
+            message[i] = c + 'a';
+
+        }
+        i++;
+    }
+    printf("%s\n", message);
+}
 
 
 
